@@ -1,0 +1,16 @@
+nav.mt-3(aria-label='Page navigation')
+  ul.pagination
+    li.page-item(class=current === 1 ? "disabled" : "")
+      span.page-link.pagination-item(data-page=current-1 aria-label='Previous')
+        span(aria-hidden='true' style="pointer-events: none;") &laquo;
+        span.sr-only Previous
+    each item in pages
+      if item.index === "..."
+        span(style="width:35px;text-align:center;") ...
+      else
+        li.page-item(class=(item.index === current) ? "disabled" : "")
+          span.page-link.pagination-item(data-page=item.index) #{item.index}
+    li.page-item(class=totalPages === current ? "disabled" : "")
+      span.page-link.pagination-item(data-page=current+1 aria-label='Next')
+        span(aria-hidden='true' style="pointer-events: none;") &raquo;
+        span.sr-only Next

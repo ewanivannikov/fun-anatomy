@@ -1,0 +1,20 @@
+if loading
+  span Loading...
+else
+  each item in goods
+    .card.p-3.mb-3
+      .row
+        .col-3
+          img.img-fluid(src=item.image style="width:100px; height:100px;")
+        .col-5
+          h2.h6.strong=item.title
+          strong.h3.text-primary.strong #{item.price} рублей
+          .text-muted.small.mt-2 #{item.descr}
+        .col-4
+          button.btn.btn-add-cart(type="button" class=`${!item.available ? 'btn-disabled' : ''} ${item.amt ? 'btn-primary' : 'btn-outline-primary'}` disabled=!item.available id=item.id data-title=item.title data-image=item.image data-price=item.price) Добавить в корзину
+          if item.amt
+            .mt-2
+              span.strong Добавлено:&nbsp;
+              span.text-primary #{item.amt} товаров
+          if !item.available
+            .mt-2 Нет в наличии

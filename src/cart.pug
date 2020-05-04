@@ -1,0 +1,21 @@
+if loading
+  span Loading...
+else
+  .card.p-3
+    if cart.cartList.length
+      each item in cart.cartList
+        .row.bg-light.mb-2
+          .col-3
+            img.img-fluid(src=item.image alt="Card image cap")
+          .col-5
+            strong #{item.title}
+          .col-2.flex.align-self-center #{item.amt}х
+          .col-2.flex.align-self-center
+            span.fas.fa-times.remove-from-cart(id=item.id)
+      .row.mt-2
+        .col-12.d-flex.flex-column.align-items-center
+          strong ИТОГ
+          strong.h3.text-primary.strong #{cart.totalPrice} рублей
+          button(type="button" class="btn btn-primary") Заказать
+    else
+      span Корзина пуста

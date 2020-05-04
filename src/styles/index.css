@@ -1,0 +1,14 @@
+body {
+  color: $body-color;
+  font-family: sans-serif;
+  background-color: $body-bg;
+}
+.strong{
+  font-weight: bold;
+}
+.page-link{
+  cursor: pointer;
+}
+.btn-disabled{
+  cursor: not-allowed;
+}
