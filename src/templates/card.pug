@@ -1,0 +1,20 @@
+if loading
+  span Loading...
+else
+  .uk-grid(data-uk-grid-margin='')
+    div(class="uk-width-3-4@m").uk-row-first
+      article.uk-article
+        h1.uk-article-title
+          a(href='layouts_post.html') Article Heading
+        p.uk-article-meta
+          | Written by Author on 12 April 2013. Posted in 
+          a(href='#') Blog
+        p
+          a(href='layouts_post.html')
+            img(
+              width='900' 
+              height='300' 
+              src='https://lh3.googleusercontent.com/uC87rCro1d5RfCbZ-ya1hrwsDUPzj9xUFAizuZm3e0qwnO5hw1VAAiElFzzN-mAw6rVkmmUtfbWs8G_jIYOsMJ92Dyim8ZApm0apqWQYZsYwrIn-Rub9FjNx1cdg2FNJ5zbTXsVniUd7TuvrWFiWIcA30aOkzgpYzkxohbSW5suNWm65k-CdrPFd1GgZwTKpn1iLjbk2KDizWJzeyoStKajvUicVyxAW13agcmsv4N-1G2cUYEJFSEqnsqtpT8oTgabX88CMEUwxWzU0Q3d0ZM5ktf24RxE9RxQuywwcvGyXd1eUb1b6ZmqHLXZMYmOkIuW-yskhvQ3XsXWUjCxG2YUucn-689oytY05_jAgHZP8iT6GJbIrlyu-XkNatTAE6dbHnz9fqjOojgg1ivIplE5sYf9X8eyanRJSluA5Hhx5hwhRJ4BVs8fM1MszI5JpqnaxTQQDgym2NT29bDi7hlvGKKHBjHS-JXujTaaumpwSOhm7swdR9omRnFHqkmSjjm-vVFKSf_eLJpQV8CM1IIUvq-D_NFhxaYN4c_P1y8Sq5nTO0iZc7ZzS14sEbC5lzxHGCKXsuz3UwyQ8N6XteJClC1ZKWwPlOZr15gaaJiFuA8S5tpatVUOv1IUDVbIuKO35CYNCQXsTqf_Izg1c_7gNWzVWCtxeBKMZt0J-_g8RYFQxDJHtnkYJA1I6bsipS5ATJHJKaJlJ-dTXFhdq7f6-_dVcRW9mfZy_dra_ucwkwC71BlCW=w890-h535-no?authuser=0' 
+              alt=''
+            )
+        p #{content}

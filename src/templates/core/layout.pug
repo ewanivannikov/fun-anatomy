@@ -1,0 +1,32 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title catalog demo
+  // https://getuikit.com/
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
+body
+  .uk-container.uk-container-center.uk-margin-top.uk-margin-large-bottom
+    nav.uk-navbar.uk-margin-large-bottom
+      a.uk-navbar-brand.uk-hidden-small(href='layouts_frontpage.html') Анатомия
+      ul.uk-navbar-nav.uk-hidden-small
+          li
+          a(href='layouts_frontpage.html') Frontpage
+          li
+          a(href='layouts_portfolio.html') Portfolio
+          li.uk-active
+          a(href='layouts_blog.html') Blog
+          li
+          a(href='layouts_documentation.html') Documentation
+          li
+          a(href='layouts_contact.html') Contact
+          li
+          a(href='layouts_login.html') Login
+      
+    block content
+

@@ -4,9 +4,11 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
-// Try the environment variable, otherwise use root
-// argv.mode !== 'production' ? '/' : 'assets/'
+const PATHS = {
+  src: path.join(__dirname, '../src'),
+  dist: path.join(__dirname, '../dist'),
+  assets: 'assets/'
+}
 
 module.exports = (env, argv) => ({
   entry: {
@@ -67,7 +69,7 @@ module.exports = (env, argv) => ({
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: path.resolve(__dirname, './src/index.pug')
+      template: path.resolve(__dirname, './src/templates/index.pug')
     }),
     new MiniCssExtractPlugin({
       filename: 'bundle.css',
