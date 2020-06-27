@@ -21,6 +21,10 @@ module.exports = (env, argv) => ({
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      js: path.resolve(__dirname, './src/js/'),
+      templates: path.resolve(__dirname, './src/templates/')
+    },
   },
   module: {
     rules: [

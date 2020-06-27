@@ -1,0 +1,15 @@
+-var marked = require('marked')
+
+if loading
+  span Loading...
+else
+  .uk-grid(data-uk-grid-margin='')
+    each item in list
+      div(class="uk-width-3-4@m").uk-row-first
+        article.uk-article
+          h1.uk-article-title
+            a(href='layouts_post.html')= item.title
+          p.uk-article-meta
+            | 12 April 2013
+            a(href='#') Blog
+          p!= marked(item.content)

@@ -1,5 +1,6 @@
 import page from 'page';
 import '../styles/index.css';
+import home from './pages/home';
 import {createStore, createEvent, createEffect, createStoreObject, forward} from 'effector';
 // import {pagination} from "./pagination";
 // import {render} from "./render";
@@ -13,13 +14,9 @@ const data = {
   loading:false
 };
 
-const indexData = {
-  content:'Главная страница',
-  title: 'yghjugtfrdekm',
-  loading:false
-};
 
-page('/', index);
+
+page('/', home);
 
 page('/card/:id', card);
 
@@ -27,11 +24,9 @@ page('*', notfound);
 
 page();
 
-function index() {
-  document.querySelector("#root").innerHTML = templateCore(indexData);
-}
-
-function card() {
+function card(match) {
+  console.log("match", match.params.id);
+  
   document.querySelector("#root").innerHTML = templateCore(data);
 }
 
