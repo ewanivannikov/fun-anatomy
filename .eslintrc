@@ -4,6 +4,6 @@
         "browser": true
   },
   "rules": {
-    "semi": 2
+    "semi": 1
   }
 }

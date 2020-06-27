@@ -53,6 +53,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "date-fns": "^2.14.0",
     "effector": "^20.13.7",
     "history": "^4.10.1",
     "jstransformer-markdown-it": "^2.1.0",
