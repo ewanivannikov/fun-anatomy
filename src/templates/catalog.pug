@@ -3,13 +3,13 @@
 if loading
   span Loading...
 else
-  .uk-grid(data-uk-grid-margin='')
+  div(class='uk-child-width-expand@s uk-text-center' uk-grid)
     each item in list
-      div(class="uk-width-3-4@m").uk-row-first
-        article.uk-article
-          h1.uk-article-title
-            a(href='layouts_post.html')= item.title
-          p.uk-article-meta
-            | 12 April 2013
-            a(href='#') Blog
-          p!= marked(item.content)
+      div
+        .uk-card.uk-card-default
+          a(href='card/'+ item.id).uk-card-media-top
+            img(src=item.img alt='')
+          a(href='card/'+ item.id).uk-card-body
+            h3.uk-card-title #{item.title}
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
