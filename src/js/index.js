@@ -1,6 +1,7 @@
 import page from 'page';
 import '../styles/index.css';
 import home from './pages/home';
+import about from './pages/about';
 import {createStore, createEvent, createEffect, createStoreObject, forward} from 'effector';
 // import {pagination} from "./pagination";
 // import {render} from "./render";
@@ -19,6 +20,8 @@ const data = {
 page('/', home);
 
 page('/card/:id', card);
+
+page('/about', about);
 
 page('*', notfound);
 
