@@ -2,9 +2,13 @@
 
 if loading
   span Loading...
+else if error
+  div #{error}
+else if data == null || data.length > 0
+  div Нет данных
 else
   div(class='uk-child-width-expand@s uk-text-center' uk-grid)
-    each item in list
+    each item in data
       div
         .uk-card.uk-card-default
           a(href='card/'+ item.id).uk-card-media-top

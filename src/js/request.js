@@ -8,7 +8,7 @@
   * }} options
   */
  const request = (method, url, options = {}) => {
-   const baseUri = 'https://resume-catalog.firebaseio.com';
+   const baseUri = 'https://fun-anotomy.firebaseio.com';
    const token = '';
  
    const headers = new Headers({

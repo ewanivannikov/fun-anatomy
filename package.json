@@ -54,9 +54,8 @@
   },
   "dependencies": {
     "date-fns": "^2.14.0",
-    "effector": "^20.13.7",
+    "effector": "^20.17.2",
     "history": "^4.10.1",
-    "jstransformer-markdown-it": "^2.1.0",
     "marked": "^0.8.2",
     "normalizr": "^3.6.0",
     "page": "^1.11.6",

@@ -1,4 +1,4 @@
-let templateAbout = require("templates/about.pug");
+import templateAbout from 'templates/about.pug';
 
 function about() {
     document.querySelector("#root").innerHTML = templateAbout();
