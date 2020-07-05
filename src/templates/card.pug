@@ -2,13 +2,17 @@
 
 if loading
   span Loading...
+else if error
+  div #{error}
+else if data == null
+  div Нет данных
 else
   .uk-grid(data-uk-grid-margin='')
     div(class="uk-width-3-4@m").uk-row-first
       article.uk-article
         h1.uk-article-title
-          a(href='layouts_post.html')= title
+          a(href='layouts_post.html')= data.title
         p.uk-article-meta
           | Written by Author on 12 April 2013. Posted in 
           a(href='#') Blog
-        p!= marked(content)
+        p!= marked(data.content)

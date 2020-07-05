@@ -3,9 +3,9 @@ import $articles, { openedPage } from 'js/models/$articles';
 
 function home() {
   openedPage();
-  console.log('$articles', $articles.updates.watch);
-  $articles.watch(res=>{
-    document.querySelector("#root").innerHTML = templateCore(res);
+
+  $articles.watch(store => {
+    document.querySelector("#root").innerHTML = templateCore(store);
   });
   
 }

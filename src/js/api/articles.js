@@ -2,6 +2,8 @@ import request from '../request';
 
 const getList = () => request('GET', '/articles.json');
 
+const getItem = (id) => request('GET', `/articles/${id}.json`);
+
 /**
  * update user
  */
@@ -9,5 +11,6 @@ const getList = () => request('GET', '/articles.json');
 
 const articlesApi = {
   getList,
+  getItem,
 };
 export default articlesApi;
