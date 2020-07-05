@@ -14,7 +14,7 @@ const loading = createStore(false);
 const error = createStore(null);
 const data = createStore(null);
 
-const articles = combine({ loading, data, error });
+const $articles = combine({ loading, data, error });
 
 // Логика и связи
 
@@ -29,16 +29,6 @@ data.on(getArticlesFx.done, (state, { result }) => result);
 forward({
   from: openedPage,
   to: getArticlesFx,
-});
-
-let $articles = {
-  loading: false,
-  data: null,
-  error: null
-}; 
-
-getArticlesFx.done.watch(({_, result}) => {
-  $articles = articles;
 });
 
 export default $articles;

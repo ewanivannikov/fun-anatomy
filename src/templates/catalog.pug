@@ -4,7 +4,7 @@ if loading
   span Loading...
 else if error
   div #{error}
-else if data == null || data.length > 0
+else if data == null || data.length === 0
   div Нет данных
 else
   div(class='uk-child-width-expand@s uk-text-center' uk-grid)
