@@ -3,5 +3,8 @@
     [
       "@babel/preset-env"
     ]
+  ],
+  "plugins": [
+    ["effector/babel-plugin", { "addLoc": true }]
   ]
 }

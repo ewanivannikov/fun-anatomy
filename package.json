@@ -55,6 +55,8 @@
   "dependencies": {
     "date-fns": "^2.14.0",
     "effector": "^20.17.2",
+    "effector-inspector": "^0.2.2",
+    "effector-logger": "^0.6.1",
     "history": "^4.10.1",
     "marked": "^0.8.2",
     "normalizr": "^3.6.0",

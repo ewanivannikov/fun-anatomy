@@ -2,7 +2,7 @@ import request from '../request';
 
 const getList = () => request('GET', '/articles.json');
 
-const getItem = (id) => request('GET', `/articles/${id}.json`);
+const getItem = ({id}) => request('GET', `/articles/${id}.json`);
 
 /**
  * update user

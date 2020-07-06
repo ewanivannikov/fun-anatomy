@@ -1,6 +1,6 @@
 import {
   createStore, createEffect, combine, createEvent, forward, sample,
-} from 'effector';
+} from 'effector-logger';
 
 import articlesApi from '../api/articles';
 

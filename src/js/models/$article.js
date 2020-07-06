@@ -1,6 +1,6 @@
 import {
-    createStore, createEffect, combine, createEvent, forward, sample,
-  } from 'effector';
+    createStore, createEffect, combine, createEvent, sample,
+  } from 'effector-logger';
   
   import articlesApi from '../api/articles';
   
@@ -18,7 +18,7 @@ import {
   
   // Логика и связи
   
-  getArticleFx.use((id) => articlesApi.getItem(id));
+  getArticleFx.use((props) => articlesApi.getItem(props));
   
   loading.on(getArticleFx.pending, (state, pending) => pending);
   
@@ -26,9 +26,10 @@ import {
   
   data.on(getArticleFx.done, (state, { result }) => result);
   
-  forward({
-    from: openedPage,
-    to: getArticleFx,
+  sample({
+    source: openedPage, /* 1 */
+    fn: (props) => (props), /* 2 */
+    target: getArticleFx, /* 3 */
   });
   
   export default $article;
